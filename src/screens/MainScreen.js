@@ -169,16 +169,19 @@ const styles = StyleSheet.create({
   buttonTextProvision: {
     color: '#344563', 
     fontSize: 13,
+    fontWeight: '500',
     fontFamily: 'IBMPlexSans-Regular'
   },
   buttonTextCritical: {
     color: '#F04438', 
     fontSize: 13,
+    fontWeight: '500',
     fontFamily: 'IBMPlexSans-Regular'
   },
   buttonTextApproval: {
     color: '#069BFE', 
     fontSize: 13,
+    fontWeight: '500',
     fontFamily: 'IBMPlexSans-Regular'
   },
   searchHolder: {
