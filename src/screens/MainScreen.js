@@ -5,14 +5,71 @@ import {
   StyleSheet,
   Text,
   Image,
-  TextInput
+  TextInput, 
+  FlatList
 } from 'react-native';
 import { useState } from 'react';
 
 const MainScreen = ({ navigation }) => {
 
   const [text, onChangeText] = useState("");
- 
+  const dataSource = [
+    { 
+      id: 0,
+      warehouseType: 'Personnel',
+      warehouseName: 'Warehouse A',
+      department: 'TE',
+      customer: 'Customer B',
+      location: '3891 Ranchview Dr. Richardson, California 62639',
+      personInCharge: 'Jane Cooper'
+    },
+    { 
+      id: 1,
+      warehouseType: 'Personnel',
+      warehouseName: 'Warehouse B',
+      department: 'TE',
+      customer: 'Customer B',
+      location: '3891 Ranchview Dr. Richardson, California 62639',
+      personInCharge: 'Jane Cooper'
+    },
+    { 
+      id: 2,
+      warehouseType: 'Customer',
+      warehouseName: 'Warehouse B',
+      department: 'TE',
+      customer: 'Customer B',
+      location: '3891 Ranchview Dr. Richardson, California 62639',
+      personInCharge: 'Jane Cooper'
+    },
+  ];
+
+  const RenderItem = ({item, index}) => {
+    return(
+          <View style={styles.flatListItem}>
+            <View style={{flexDirection: 'row'}}>
+              <View style={styles.warehouseType}>
+                <Text style={{fontSize: 12, fontWeight: '400', color: '#069BFE'}}>{item.warehouseType}</Text>
+              </View>
+              <View style={styles.department}>
+                <Text style={{fontSize: 10, fontWeight: '400', color: '#F67C00'}}>{item.department}</Text>
+              </View>
+            </View>        
+            <View style={{marginTop: 3}}>
+              <Text style={{fontSize: 16, fontWeight: '600', color: '#343A40'}}>{item.warehouseName}</Text>
+              <Text style={{fontSize: 12, fontWeight: '400', color: '#343A40'}}>{item.customer}</Text>
+              <View style={{flexDirection: 'row', marginTop: 3}}>
+                <Image source={require('../assets/icon/location.png')} style={{width: 10.5, height: 12.67, top: 2}}/> 
+                <Text style={{marginLeft: 5, fontSize: 12, fontWeight: '400', color: '#7A8289'}}>{item.location}</Text>
+              </View>
+              <View style={{flexDirection: 'row', marginTop: 3}}>
+                <Image source={require('../assets/icon/person.png')} style={{width: 12, height: 8.4, top: 5}}/> 
+                <Text style={{marginLeft: 5, fontSize: 12, fontWeight: '400', color: '#7A8289'}}>{item.personInCharge}</Text>
+              </View>
+            </View>    
+          </View>
+    )
+  }
+
   return (
     <SafeAreaView style={styles.container}>  
       <View style={styles.buttonContainer}>
@@ -48,6 +105,11 @@ const MainScreen = ({ navigation }) => {
         <Image source={require('../assets/icon/filter.png')}
                                 style={{margin: 10, width: 18, height: 16}}/>                        
       </View>
+      <FlatList
+        data={dataSource} 
+        renderItem={({item, index}) => 
+        <RenderItem item={item} index={index}/> 
+      }/>
     </SafeAreaView>
   );
 };
@@ -56,7 +118,8 @@ const styles = StyleSheet.create({
   container: {
     flex:1, 
     backgroundColor:'#F1F1F1', 
-    alignItems:'center'
+    alignItems:'center',
+    justifyContent: 'center'
   },
   buttonContainer: {
     flexDirection: 'row', 
@@ -102,13 +165,53 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     shadowColor: "#000",
     shadowOffset: {
-      width: 6,
+      width: 0,
       height: 2,
     },
     shadowOpacity: 0.04,
-    shadowRadius: 5
+    shadowRadius: 6
     },
-
+  flatListItem: {
+    marginTop: 5, 
+    padding: 8,
+    backgroundColor:'#FFFFFF', 
+    width: 345, 
+    height: 120, 
+    borderColor: '#E2E8F0', 
+    borderRadius: 5, 
+    borderWidth: 1,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.04,
+    shadowRadius: 6
+  },
+  warehouseType: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'rgba(6, 155, 254, 0.1)',
+    paddingTop: 1,
+    paddingLeft: 13,
+    paddingBottom: 1,
+    paddingRight: 13,
+    width: 81,
+    height: 18,
+    borderRadius: 20, 
+    marginTop: 1
+  },
+  department : {
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#FCD8B3', 
+    position:'absolute', 
+    left: 304,
+    width: 24,
+    height: 24,
+    borderRadius: 18, 
+    marginTop: 3
+  },
 });
 
 export default MainScreen;
