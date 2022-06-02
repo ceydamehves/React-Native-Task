@@ -1,4 +1,4 @@
-package com.reactnativetask;
+package com.ceydamehves.reactnativetask;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;

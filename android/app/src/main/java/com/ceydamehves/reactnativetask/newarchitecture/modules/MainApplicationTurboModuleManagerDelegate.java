@@ -1,4 +1,4 @@
-package com.reactnativetask.newarchitecture.modules;
+package com.ceydamehves.reactnativetask.newarchitecture.modules;
 
 import com.facebook.jni.HybridData;
 import com.facebook.react.ReactPackage;

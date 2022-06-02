@@ -1,4 +1,4 @@
-package com.reactnativetask.newarchitecture;
+package com.ceydamehves.reactnativetask.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -19,9 +19,9 @@ import com.facebook.react.fabric.CoreComponentsRegistry;
 import com.facebook.react.fabric.EmptyReactNativeConfig;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.reactnativetask.BuildConfig;
-import com.reactnativetask.newarchitecture.components.MainComponentsRegistry;
-import com.reactnativetask.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import com.ceydamehves.reactnativetask.BuildConfig;
+import com.ceydamehves.reactnativetask.newarchitecture.components.MainComponentsRegistry;
+import com.ceydamehves.reactnativetask.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 
