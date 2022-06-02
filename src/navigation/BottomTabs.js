@@ -34,7 +34,7 @@ const BottomTabs = () => {
                     <View style={styles.container}>
                         <Image source={require('../assets/icon/home.png')}
                                style={{width: 18, height: 18, tintColor: focused ? '#069BFE' : '#444978'}}/>
-                        <Text style={{tintColor: focused ? '#069BFE' : '#444978', fontSize: 10}}>
+                        <Text style={{color: '#444978', fontSize: 10, fontFamily: 'IBMPlexSans-Regular', marginTop: 5, fontWeight: '600'}}>
                             Home
                         </Text>
                     </View>
@@ -46,7 +46,7 @@ const BottomTabs = () => {
                     <View style={styles.container}>
                         <Image source={require('../assets/icon/list.png')}
                                style={{width: 18, height: 18, tintColor: focused ? '#069BFE' : '#444978'}}/>
-                        <Text style={{tintColor: focused ? '#069BFE' : '#444978', fontSize: 10}}>
+                        <Text style={{color: '#444978', fontSize: 10, fontFamily: 'IBMPlexSans-Regular', marginTop: 5, fontWeight: '600'}}>
                             Worky List
                         </Text>
                     </View>
@@ -59,7 +59,7 @@ const BottomTabs = () => {
                 backgroundColor: '#fff'
                 },
                 headerTitleAlign: 'center',
-                headerTintColor: '#344563',
+                headerTintColor: '#444978',
                 headerTitleStyle: {
                 fontWeight: 'normal',
                 fontSize: 14
@@ -82,7 +82,7 @@ const BottomTabs = () => {
                     <View style={styles.container}>
                         <Image source={require('../assets/icon/maintenance.png')}
                                style={{width: 18, height: 18, tintColor: focused ? '#069BFE' : '#444978'}}/>
-                        <Text style={{tintColor: focused ? '#069BFE' : '#444978', fontSize: 10}}>
+                        <Text style={{color: '#444978', fontSize: 10, fontFamily: 'IBMPlexSans-Regular', marginTop: 5, fontWeight: '600'}}>
                             Maintenance
                         </Text>
                     </View>
@@ -94,7 +94,7 @@ const BottomTabs = () => {
                     <View style={styles.container}>
                         <Image source={require('../assets/icon/map.png')}
                                style={{width: 18, height: 18, tintColor: focused ? '#069BFE' : '#444978'}}/>
-                        <Text style={{tintColor: focused ? '#069BFE' : '#444978', fontSize: 10}}>
+                        <Text style={{color: '#444978', fontSize: 10, fontFamily: 'IBMPlexSans-Regular', marginTop: 5, fontWeight: '600'}}>
                             Map
                         </Text>
                     </View>

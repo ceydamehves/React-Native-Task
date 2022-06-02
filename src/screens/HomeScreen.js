@@ -9,16 +9,10 @@ import {
 const HomeScreen = ({ navigation }) => {
 
   return (
-    <SafeAreaView style={{flex:1, backgroundColor:'#fff'}}>  
-      <View>   
-        <Text> Home Screen </Text>
-      </View>   
+    <SafeAreaView style={{flex:1, backgroundColor:'#F1F1F1', alignItems: 'center', justifyContent: 'center'}}>  
+        <Text style={{fontFamily:'IBMPlexSans-Regular', fontWeight: '600', fontSize: 24}}> Home Screen </Text>
     </SafeAreaView>
   );
 };
-
-const styles = StyleSheet.create({
-  
-});
 
 export default HomeScreen;

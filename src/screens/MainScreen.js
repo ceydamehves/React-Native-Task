@@ -49,7 +49,7 @@ const MainScreen = ({ navigation }) => {
       <View style={[styles.swipeButtons , {backgroundColor:'#F04438',  marginLeft: 5}]}>
         <Image source={require('../assets/icon/trash.png')}
                                 style={{margin: 10, width: 18.8, height: 18.8}}/> 
-        <Text style={{color:'#fff', fontSize: 11, fontWeight:'600'}}>
+        <Text style={{color:'#fff', fontSize: 12, fontWeight:'600', fontFamily: 'IBMPlexSans-Regular'}}>
           Delete
         </Text>        
       </View>
@@ -61,7 +61,7 @@ const MainScreen = ({ navigation }) => {
       <View style={[styles.swipeButtons , {backgroundColor:'#ADB5BD', marginRight: 5}]}>
         <Image source={require('../assets/icon/pencil.png')}
                                 style={{margin: 10, width: 18, height: 18}}/> 
-        <Text style={{color:'#fff', fontSize: 12, fontWeight:'600'}}>
+        <Text style={{color:'#fff', fontSize: 12, fontWeight:'600', fontFamily: 'IBMPlexSans-Regular'}}>
           Edit
         </Text>        
       </View>
@@ -75,22 +75,22 @@ const MainScreen = ({ navigation }) => {
           <View style={styles.flatListItem}>
             <View style={{flexDirection: 'row'}}>
               <View style={styles.warehouseType}>
-                <Text style={{fontSize: 12, fontWeight: '400', color: '#069BFE'}}>{item.warehouseType}</Text>
+                <Text style={{fontSize: 12, fontWeight: '400', color: '#069BFE', fontFamily: 'IBMPlexSans-Regular'}}>{item.warehouseType}</Text>
               </View>
               <View style={styles.department}>
-                <Text style={{fontSize: 10, fontWeight: '400', color: '#F67C00'}}>{item.department}</Text>
+                <Text style={{fontSize: 10, fontWeight: '400', color: '#F67C00', fontFamily: 'IBMPlexSans-Regular'}}>{item.department}</Text>
               </View>
             </View>        
             <View style={{marginTop: 3}}>
-              <Text style={{fontSize: 16, fontWeight: '600', color: '#343A40'}}>{item.warehouseName}</Text>
-              <Text style={{fontSize: 12, fontWeight: '400', color: '#343A40'}}>{item.customer}</Text>
+              <Text style={{fontSize: 16, fontWeight: '600', color: '#343A40', fontFamily: 'IBMPlexSans-Regular'}}>{item.warehouseName}</Text>
+              <Text style={{fontSize: 12, fontWeight: '400', color: '#343A40', fontFamily: 'IBMPlexSans-Regular'}}>{item.customer}</Text>
               <View style={{flexDirection: 'row', marginTop: 3}}>
                 <Image source={require('../assets/icon/location.png')} style={{width: 10.5, height: 12.67, top: 2}}/> 
-                <Text style={{marginLeft: 5, fontSize: 12, fontWeight: '400', color: '#7A8289'}}>{item.location}</Text>
+                <Text style={{marginLeft: 5, fontSize: 12, fontWeight: '400', color: '#7A8289', fontFamily: 'IBMPlexSans-Regular'}}>{item.location}</Text>
               </View>
               <View style={{flexDirection: 'row', marginTop: 3}}>
                 <Image source={require('../assets/icon/person.png')} style={{width: 12, height: 8.4, top: 5}}/> 
-                <Text style={{marginLeft: 5, fontSize: 12, fontWeight: '400', color: '#7A8289'}}>{item.personInCharge}</Text>
+                <Text style={{marginLeft: 5, fontSize: 12, fontWeight: '400', color: '#7A8289', fontFamily: 'IBMPlexSans-Regular'}}>{item.personInCharge}</Text>
               </View>
             </View>    
           </View>
@@ -168,15 +168,18 @@ const styles = StyleSheet.create({
   },
   buttonTextProvision: {
     color: '#344563', 
-    fontSize: 13
+    fontSize: 13,
+    fontFamily: 'IBMPlexSans-Regular'
   },
   buttonTextCritical: {
     color: '#F04438', 
-    fontSize: 13
+    fontSize: 13,
+    fontFamily: 'IBMPlexSans-Regular'
   },
   buttonTextApproval: {
     color: '#069BFE', 
-    fontSize: 13
+    fontSize: 13,
+    fontFamily: 'IBMPlexSans-Regular'
   },
   searchHolder: {
     flexDirection:'row', 
