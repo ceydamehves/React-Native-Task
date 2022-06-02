@@ -9,6 +9,7 @@ import {
   FlatList
 } from 'react-native';
 import { useState } from 'react';
+import {GestureHandlerRootView, Swipeable} from 'react-native-gesture-handler';
 
 const MainScreen = ({ navigation }) => {
 
@@ -43,8 +44,34 @@ const MainScreen = ({ navigation }) => {
     },
   ];
 
+  const RenderDelete = () => {
+    return (
+      <View style={[styles.swipeButtons , {backgroundColor:'#F04438',  marginLeft: 5}]}>
+        <Image source={require('../assets/icon/trash.png')}
+                                style={{margin: 10, width: 18.8, height: 18.8}}/> 
+        <Text style={{color:'#fff', fontSize: 11, fontWeight:'600'}}>
+          Delete
+        </Text>        
+      </View>
+    )
+  }
+
+  const RenderEdit = () => {
+    return (
+      <View style={[styles.swipeButtons , {backgroundColor:'#ADB5BD', marginRight: 5}]}>
+        <Image source={require('../assets/icon/pencil.png')}
+                                style={{margin: 10, width: 18, height: 18}}/> 
+        <Text style={{color:'#fff', fontSize: 12, fontWeight:'600'}}>
+          Edit
+        </Text>        
+      </View>
+    )
+  }
+
   const RenderItem = ({item, index}) => {
     return(
+      <GestureHandlerRootView>
+        <Swipeable renderRightActions={RenderDelete} renderLeftActions={RenderEdit}>
           <View style={styles.flatListItem}>
             <View style={{flexDirection: 'row'}}>
               <View style={styles.warehouseType}>
@@ -67,6 +94,8 @@ const MainScreen = ({ navigation }) => {
               </View>
             </View>    
           </View>
+        </Swipeable>
+      </GestureHandlerRootView>
     )
   }
 
@@ -212,6 +241,18 @@ const styles = StyleSheet.create({
     borderRadius: 18, 
     marginTop: 3
   },
+  swipeButtons: {
+    alignItems:'center', 
+    justifyContent:'center', 
+    height: 120, 
+    width: 80, 
+    marginTop: 5,
+    borderRadius: 5,
+    paddingTop: 17, 
+    paddingLeft: 23, 
+    paddingBottom: 17, 
+    paddingRight: 23
+  }
 });
 
 export default MainScreen;
